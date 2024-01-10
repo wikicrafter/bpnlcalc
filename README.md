@@ -1,5 +1,4 @@
-# bpnlcalc
-
+# B-PNL Calc [Demo](https://wikicrafter.github.io/bpnlcalc/)
 
 #### Keep in mind that this is still a simplified version and may not fully replicate Binance's exact calculations but I try my best!
 #### 
