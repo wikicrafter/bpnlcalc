@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B-PNL Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1>B-PNL Calculator</h1>
+        <label for="initialInvestment">Initial Investment ($):</label>
+        <input type="number" id="initialInvestment" placeholder="Enter initial investment">
+
+        <label for="entryPrice">Entry Price ($):</label>
+        <input type="number" id="entryPrice" placeholder="Enter entry price">
+
+        <label for="exitPrice">Exit Price ($):</label>
+        <input type="number" id="exitPrice" placeholder="Enter exit price">
+
+        <label for="leverage">Leverage:</label>
+        <input type="number" id="leverage" placeholder="Enter leverage">
+
+        <label for="daysHeld">Days Held:</label>
+        <input type="number" id="daysHeld" placeholder="Enter days held">
+
+        <label for="fundingRate">Funding Rate (%):</label>
+        <input type="number" id="fundingRate" placeholder="Enter funding rate">
+
+        <label for="tradingFee">Trading Fee (%):</label>
+        <input type="number" id="tradingFee" placeholder="Enter trading fee">
+
+        <button onclick="calculatePNL()">Calculate PNL</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
