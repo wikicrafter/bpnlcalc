@@ -30,6 +30,6 @@ Sum up all the costs, including trading fees and funding costs: totalCosts = tot
 
 # NFA & DYOR
 
-If you like my repo and want to support me then here is my USDT address on Tron (TRC20) Chain: TLL3LgZeCAn7QsJ8RZuADpn5mawbELwmgx
+
 
 
