@@ -1,40 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>B-PNL Calculator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="calculator">
-        <h1>B-PNL Calculator</h1>
-        <label for="initialInvestment">Initial Investment ($):</label>
-        <input type="number" id="initialInvestment" placeholder="Enter initial investment">
+        <h1>⚡ B-PNL Calculator</h1>
+        <p class="subtitle">Binance Futures Profit & Loss Calculator</p>
 
-        <label for="entryPrice">Entry Price ($):</label>
-        <input type="number" id="entryPrice" placeholder="Enter entry price">
+        <div class="input-group">
+            <label for="positionType">Position Type:</label>
+            <select id="positionType">
+                <option value="long">Long (Buy)</option>
+                <option value="short">Short (Sell)</option>
+            </select>
+        </div>
 
-        <label for="exitPrice">Exit Price ($):</label>
-        <input type="number" id="exitPrice" placeholder="Enter exit price">
+        <div class="input-group">
+            <label for="initialInvestment">Initial Investment ($):</label>
+            <input type="number" id="initialInvestment" placeholder="e.g., 1000" step="0.01">
+        </div>
 
-        <label for="leverage">Leverage:</label>
-        <input type="number" id="leverage" placeholder="Enter leverage">
+        <div class="input-group">
+            <label for="entryPrice">Entry Price ($):</label>
+            <input type="number" id="entryPrice" placeholder="e.g., 50000" step="0.01">
+        </div>
 
-        <label for="daysHeld">Days Held:</label>
-        <input type="number" id="daysHeld" placeholder="Enter days held">
+        <div class="input-group">
+            <label for="exitPrice">Exit Price ($):</label>
+            <input type="number" id="exitPrice" placeholder="e.g., 52000" step="0.01">
+        </div>
 
-        <label for="fundingRate">Funding Rate (%):</label>
-        <input type="number" id="fundingRate" placeholder="Enter funding rate">
+        <div class="input-group">
+            <label for="leverage">Leverage (x):</label>
+            <input type="number" id="leverage" placeholder="e.g., 10" min="1" max="125" value="10">
+        </div>
 
-        <label for="tradingFee">Trading Fee (%):</label>
-        <input type="number" id="tradingFee" placeholder="Enter trading fee">
+        <div class="input-group">
+            <label for="hoursHeld">Hours Held:</label>
+            <input type="number" id="hoursHeld" placeholder="e.g., 24" min="0" value="24">
+            <small>Funding is charged every 8 hours</small>
+        </div>
 
-        <button onclick="calculatePNL()">Calculate PNL</button>
+        <div class="input-group">
+            <label for="fundingRate">Funding Rate (%):</label>
+            <input type="number" id="fundingRate" placeholder="e.g., 0.01" step="0.001" value="0.01">
+            <small>Typical range: 0.01% to 0.03%</small>
+        </div>
+
+        <div class="input-group">
+            <label for="tradingFee">Trading Fee (%):</label>
+            <input type="number" id="tradingFee" placeholder="e.g., 0.04" step="0.001" value="0.04">
+            <small>Maker: 0.02%, Taker: 0.04%</small>
+        </div>
+
+        <button onclick="calculatePNL()" class="calculate-btn">Calculate P&L</button>
 
         <div id="result"></div>
+
+        <div class="disclaimer">
+            <p><strong>⚠️ Disclaimer:</strong> This calculator is for educational and informational purposes only. It
+                provides simplified estimates and may not fully replicate Binance's exact calculations. Always verify
+                results independently before making trading decisions.</p>
+            <p><strong>NFA & DYOR</strong> - Not Financial Advice. Do Your Own Research.</p>
+        </div>
     </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
